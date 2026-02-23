@@ -13,12 +13,15 @@
 }
 
 .navbar {
-    width: 1200px;
-    height: 75px;
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
     margin: auto;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
+    padding: 0 15px;
 }
 
 .logo {
@@ -32,13 +35,10 @@
 .menu ul {
     display: flex;
     justify-content: center;
-    align-items: center;
 }
 
 .menu ul li {
-    list-style: none;
-    margin-left: 62px;
-    font-size: 14px;
+    margin-left: 10px;
 }
 
 .menu ul li a {
@@ -89,7 +89,8 @@
 }
 
 .content {
-    width: 1200px;
+    width: 90%;
+    max-width: 1200px;
     margin: auto;
     color: #fff;
     position: relative;
@@ -280,14 +281,12 @@ footer {
 /* Existing styles remain unchanged above... */
 
 .section-img {
-    width: 80%;
+    width: 100%;
     max-width: 600px;
     height: auto;
     border-radius: 10px;
     margin: 20px auto;
     display: block;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    transition: transform 0.3s ease;
 }
 
 .section-img:hover {
@@ -353,3 +352,108 @@ footer {
     text-align: center;
     padding: 20px;
 }
+
+/ Tablet screens /
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+    }
+
+    .menu ul {
+        flex-direction: column;
+        margin: 10px 0;
+    }
+
+    .menu ul li {
+        margin: 10px 0;
+    }
+
+    .search {
+        margin-top: 10px;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .form {
+        position: static;
+        margin: 20px auto;
+        width: 90%;
+    }
+
+    .content {
+        width: 95%;
+        text-align: center;
+    }
+
+    .content h1 {
+        font-size: 36px;
+    }
+
+    .content span {
+        font-size: 42px;
+    }
+}
+
+/* Phone screens */
+@media (max-width: 480px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo {
+        font-size: 28px;
+        padding: 0;
+    }
+
+    .menu ul {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .menu ul li {
+        margin: 8px 0;
+    }
+
+    .srch {
+        width: 140px;
+        font-size: 14px;
+    }
+
+    .btn {
+        width: 80px;
+        font-size: 14px;
+    }
+
+    .content h1 {
+        font-size: 24px;
+        line-height: 1.3;
+    }
+
+    .content span {
+        font-size: 28px;
+    }
+
+    .section-img {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .form {
+        width: 100%;
+        margin: 15px auto;
+    }
+
+    #contacts form {
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    footer {
+        font-size: 14px;
+        padding: 15px;
+    }
+}
+
